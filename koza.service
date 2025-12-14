@@ -1,0 +1,26 @@
+[Unit]
+Description=K.O.Z.A
+After=network.target
+
+[Service]
+Type=simple
+
+ExecStart=/usr/bin/python3 /home/pi/koza.py
+WorkingDirectory=/home/pi
+
+User=pi
+Group=pi
+
+Restart=always
+RestartSec=2
+
+# for ffplay and subprocess.Popen:
+KillMode=control-group
+TimeoutStopSec=5
+
+# logs in systemd
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
