@@ -1,0 +1,31 @@
+modes:
+  1:
+    type: stop
+
+  2:
+    type: file
+    value: audio/fireplace.flac
+
+  3:
+    type: file
+    value: audio/birds.flac
+
+  4:
+    type: file
+    value: audio/crickets.flac
+
+  5:
+    type: file
+    value: audio/ocean.flac
+
+  6:
+    type: radio
+    value: Radio Kraków
+
+  7:
+    type: radio
+    value: Polskie Radio Program 2
+
+  8:
+    type: radio
+    value: BBC World Service

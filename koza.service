@@ -5,16 +5,19 @@ After=network.target
 [Service]
 Type=simple
 
-ExecStart=/usr/bin/python3 /home/pi/koza.py
+ExecStart=/home/pi/venv-lw/bin/python /home/pi/koza.py
 WorkingDirectory=/home/pi
 
 User=pi
 Group=pi
+SupplementaryGroups=audio
+Environment=KOZA_AO=alsa
+Environment=KOZA_AUDIO_DEVICE=alsa/sysdefault:CARD=Headphones
 
 Restart=always
 RestartSec=2
 
-# for ffplay and subprocess.Popen:
+# for mpv backend:
 KillMode=control-group
 TimeoutStopSec=5
 
